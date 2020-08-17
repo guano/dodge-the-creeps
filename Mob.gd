@@ -11,6 +11,7 @@ func _ready():
 	$AnimatedSprite.animation = mob_types[randi() % mob_types.size()]
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -18,3 +19,4 @@ func _ready():
 
 func _on_VisibilityNotifier_screen_exited():
 	queue_free()
+
