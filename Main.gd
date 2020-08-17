@@ -30,7 +30,9 @@ func new_game():
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
 	$Music.play()
-	$Mob.queue_free()
+	if(get_node_or_null("Mob") != null):
+		get_node("Mob").queue_free()
+	#$Mob.queue_free()
 
 func _on_MobTimer_timeout():
 	# Choose a random location on Path2D.
